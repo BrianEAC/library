@@ -10,12 +10,19 @@ h1 {
 }
 
 .card {
+    box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 25%;
     padding: 0 10px;
+    float: left;  
+    border: solid 2px seagreen;
+    border-radius: 5%;     
 }
 
-form {
+#form {
+    display: table;
+    margin: 0 auto;
+    margin-top: 3em;
     
 }
 
@@ -25,4 +32,10 @@ form {
 
 .hiddenform{
     visibility: hidden;
+}
+
+#books{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    
 }

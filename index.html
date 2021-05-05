@@ -7,16 +7,19 @@
 </head>
 <body>
     <h1>My Library!</h1>
-    <div id='user input'> <button class='btn' id='newbook'>Add new book!</button>
-    <form class='hiddenform'>
-        <input type='text' id='title'>
-        <input type='text' id='author'>
-        <input type='text' id='pages'>
-        <input type='text' id='read status'>
+    <div id='user input'> 
+    <button class='btn' id='newbook'>Add new book!</button>
+    <form id='form' class='hiddenform'>
+        <input type='text' placeholder='title' id='title'>
+        <input type='text' placeholder= 'author' id='author'>
+        <input type='text' placeholder= 'pages' id='pages'>
+        <label> read<input type='checkbox' placeholder= 'read status'id='readstatus'></label>
         <button type='button' id='submit'>Submit book</button>
     </form>
     </div> 
-    <div id='books'></div>
+    <div id='books'>
+
+    </div>
 </body>
 
 <script src='script.js'></script>
