@@ -14,19 +14,26 @@ this.id = myLibrary.length - 1;
 
 
 function addBookToLibrary(){
+    submitButton = document.querySelector('#submit');
+    submitButton.addEventListener('click', () => {
+        form.setAttribute('class', 'hiddenform');
+        displayBook();
+    });
+    
+    
+    
+}
+
+function displayBook(){
+    booksDiv = document.querySelector('#books');
     newBook = new Book();
     myLibrary.push(newBook);
-    newBook.title = prompt('title:');
-    newBook.author = prompt('author');
-    newBook.pages = prompt('pages');
-    newBook.read = prompt('read?');
-    booksDiv = document.querySelector('#books');
     newBookElement= document.createElement('p');
     newBookElement.setAttribute('id', newBook.id);
-    newBookElement.textContent = `${newBook.title}, ${newBook.author}, ${newBook.pages}, ${newBook.read}`;
+    newBookElement.setAttribute('class', 'card');
+    newBookElement.textContent = `${newBook.title},  ${newBook.author}, ${newBook.pages}, ${newBook.read}`;
     booksDiv.appendChild(newBookElement);
     addRemoveBtn(newBook.id);
-    
 }
 
 function addRemoveBtn(id){
@@ -44,9 +51,12 @@ function addRemoveBtn(id){
 
 
 const newBookBtn = document.querySelector('#newbook');
-newBookBtn.addEventListener('click', function(){
+newBookBtn.addEventListener('click', () => {
+    form = document.querySelector('form');  
+    form.setAttribute('class', 'visibleform');
     addBookToLibrary();
-    
 })
+
+
 
 
