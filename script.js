@@ -13,18 +13,8 @@ this.id = myLibrary.length - 1;
 
 
 
-function addBookToLibrary(){
-    submitButton = document.querySelector('#submit');
-    submitButton.addEventListener('click', () => {
-        form.setAttribute('class', 'hiddenform');
-        displayBook();
-    });
-    
-    
-    
-}
 
-function displayBook(){
+function addBookToLibrary(){
     booksDiv = document.querySelector('#books');
     newBook = new Book();
     myLibrary.push(newBook);
@@ -46,7 +36,7 @@ function addRemoveBtn(id){
         book = document.getElementById(thisId);
         book.textContent = '';
     } )
-
+    
 }
 
 
@@ -54,9 +44,11 @@ const newBookBtn = document.querySelector('#newbook');
 newBookBtn.addEventListener('click', () => {
     form = document.querySelector('form');  
     form.setAttribute('class', 'visibleform');
+})  
+
+
+submitButton = document.querySelector('#submit');
+submitButton.addEventListener('click', () => {
+    form.setAttribute('class', 'hiddenform');
     addBookToLibrary();
-})
-
-
-
-
+}); 
